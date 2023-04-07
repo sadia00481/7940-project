@@ -1,0 +1,7 @@
+# #telegram
+# configparser
+# redis
+telegram
+python-telegram-bot==13.7
+configparser
+pymysql

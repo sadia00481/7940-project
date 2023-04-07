@@ -1,15 +1,16 @@
+import os
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters,CallbackContext
-import configparser
+#import configparser
 import os
 import logging
 import pymysql
 global pymysql1
 def main():
     # Load your token and create an Updater for your Bot
-    config = configparser.ConfigParser()
-    config.read('config.ini')
-    updater = Updater(token=(config['TELEGRAM']['ACCESS_TOKEN']), use_context=True)
+    #config = configparser.ConfigParser()
+    #config.read('config.ini')
+    updater = Updater(token=(os.environ['ACCESS_TOKEN']), use_context=True)
     dispatcher = updater.dispatcher
     # updater = Updater(token=(os.environ['ACCESS_TOKEN']), use_context=True)
     # dispatcher = updater.dispatcher
